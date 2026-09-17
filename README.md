@@ -15,19 +15,14 @@ The project includes:
 
 The README provides a practical reference for setting up and managing the server locally or on a remote Linux server.
 ## Table of contents
-[1-Prerequisites](#prerequisites)
+- [Prerequisites](#prerequisites)
+- [Quickstart](#quickstart)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Persistence Test](#Persitence-Test)
+- [Useful Docker Commands](#useful-Docker-Commands)
 
-[2-Quickstart](#quickstart)
-
-[3-Usage](#usage)
-
-[4-Testing](#testing)
-
-[5-Persistence Test](#Persitence-Test)
-
-[6-Useful Docker Commands](#useful-Docker-Commands)
-
-## 1- Prerequisites
+## Prerequisites
 Before working with this project, you should have basic knowledge of:
 
 * Terminal / shell commands
@@ -77,7 +72,7 @@ On the windowns Powershell, activate the environment with:
 .\.venv\Scripts\Activate.ps1
 ```
 
-## 2- Quickstart
+## Quickstart
 ### Clone the repository
 
 * Navigate to the directory where you want to store the project.
@@ -128,7 +123,7 @@ docker compose ps
 The expected port mapping is:
 `8888->25565/tcp`.  This means:`Host port 8888 → Container port 25565`
 
-## 3- Usage
+## Usage
 The project uses a Minecraft Java Edition server running inside a Docker container.
 
 The Minecraft server listens on `port 25565` inside the container.
@@ -171,7 +166,7 @@ The Docker Compose configuration contains:
 `restart: unless-stopped`
 This means Docker automatically restarts the Minecraft container after a Docker/server restart, unless the container was explicitly stopped.
 
-## 4- Testing
+## Testing
 This project uses the Python package `mcstatus` to test whether the Minecraft server is reachable.
 ### Install `mcstatus`
 Activate the Python virtual environment first. Then install `mcstatus`:
@@ -223,7 +218,8 @@ The exact values can differ depending on the server state and network conditions
 ### Local testing
 If the Minecraft server is running directly on your local machine with the default Minecraft port, the test can use:
 `server = JavaServer.lookup("localhost:25565")`
-## 5- Persistence Test
+
+## Persistence Test
 The `Minecraft world` must remain available even when the Docker container is removed.
 The project therefore mounts the `world/` directory into the container.
 ### Start the server
@@ -270,7 +266,7 @@ docker compose logs
 ```
 The Minecraft server should load the existing `world/` directory.
 
-## 6- Useful Docker Commands
+## Useful Docker Commands
 * Build the Docker image:
 ```bash
 docker compose build
