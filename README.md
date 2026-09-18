@@ -1,17 +1,8 @@
 # Minecraft Server
 This repository contains everything required to set up, run, test, and maintain a Minecraft Java Edition server using Docker and Docker Compose.
 
-The project includes:
-
-* Docker configuration for the Minecraft server
-* Environment configuration
-* Minecraft server configuration
-* Persistent world storage
-* Server startup and shutdown procedures
-* Server status and log management
-* Automated restart configuration
-* Python-based server connectivity testing with mcstatus
-* Persistence testing
+The project includes the Docker and Minecraft server configuration, 
+environment variable management, persistent world storage, and server startup and shutdown procedures. It also provides server status and log management, automatic container restart configuration, Python-based server connectivity testing using mcstatus, and persistence testing to verify that Minecraft world data is retained after container restarts and recreation.
 
 The README provides a practical reference for setting up and managing the server locally or on a remote Linux server.
 ## Table of contents
