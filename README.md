@@ -28,6 +28,7 @@ Terminal / shell commands, Git, Docker, Docker Compose and Python virtual enviro
 * Git must be intalled.
 * Docker must be installed and running correctly.
 >**Note:** `The Dockerfile describes how the Docker image for the Minecraft server is built.`
+
 > **Note:** `The Docker-compose.yaml describes how the Minecraft container is started and configured, for example ports, volumes, and restart behavior.`
 * Python virtual environment
 A Python virtual environment is required for the Python-based testing tools.
@@ -76,10 +77,8 @@ The expected port mapping is:
 ## Usage
 The project uses a Minecraft Java Edition server running inside a Docker container.
 The Minecraft server listens on `port 25565` inside the container.
-
 The host port is configured through the `.env file`:
 `MINECRAFT_PORT=8888`
-
 Therefore, the default connection is: `Server-IP:8888`
 * Check the server status
 ```bash
@@ -99,7 +98,6 @@ Press `Ctrl+C` to stop following the logs.
 docker compose down
 ```
 This stops and removes the Docker container and its Compose network.
-
 The Minecraft world remains stored in the local world/ directory because it is mounted as a Docker volume.
 * Start the existing container again
 ```bash
@@ -113,12 +111,10 @@ docker compose restart
 The Docker Compose configuration contains:
 `restart: unless-stopped`
 This means Docker automatically restarts the Minecraft container after a Docker/server restart, unless the container was explicitly stopped.
-
 * Testing
 This project uses the Python package `mcstatus` to test whether the Minecraft server is reachable.
 * Install `mcstatus`
 Activate the Python virtual environment first. Then install `mcstatus`:
-
 ```bash
 python3 -m pip install mcstatus
 ```
@@ -128,13 +124,10 @@ python3 -m pip show mcstatus
 ```
 For more about 'mcstatus' check it: `https://github.com/py-mine/mcstatus`
 * Create the test script
-
 Create a file called: `test1_minecraft.py`
 Example:
-
 ```bash
 from mcstatus import JavaServer
-
 server = JavaServer.lookup("SERVER_IP:8888")
 status = server.status()
 
@@ -156,7 +149,6 @@ Run:
 python test1_minecraft.py
 ```
 A successful test should produce output similar to:
-
 `The server is online and reachable!`
 `The server nun has: 0 player(s) online`
 `The maximal number of players is: 20`
@@ -213,7 +205,6 @@ Check the logs
 docker compose logs
 ```
 The Minecraft server should load the existing `world/` directory.
-
 ## Useful Docker Commands
 * Build the Docker image:
 ```bash
