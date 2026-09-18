@@ -93,7 +93,7 @@ To continuously follow the logs:
 docker compose logs -f
 ```
 Press `Ctrl+C` to stop following the logs.
-* Stop the server
+* Stop the container
 ```bash
 docker compose down
 ```
@@ -107,7 +107,7 @@ docker compose up -d
 ```bash
 docker compose restart
 ```
-* Automatic restart
+* Automatic restart 
 The Docker Compose configuration contains:
 `restart: unless-stopped`
 This means Docker automatically restarts the Minecraft container after a Docker/server restart, unless the container was explicitly stopped.
