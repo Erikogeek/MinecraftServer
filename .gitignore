@@ -5,6 +5,7 @@ versions/
 libraries/
 test1_minecraft.py/
 Dockerfile/
+..dockerignore/
 
 #  Minecraft generated files
 eula.txt
