@@ -25,41 +25,12 @@ The README provides a practical reference for setting up and managing the server
 ## Prerequisites
 Before working with this project, you should have basic knowledge of:
 Terminal / shell commands, Git, Docker, Docker Compose and Python virtual environments
-* Git
-Git must be intalled. Check the installed versiion with:
-```bash
-git --version
-```
-* Docker
-Docker engine must be installed and running correctly.Check the installed versiion with:
-```bash
-docker --version
-```
+* Git must be intalled.
+* Docker must be installed and running correctly.
 >**Note:** `The Dockerfile describes how the Docker image for the Minecraft server is built.`
-Check the docker compose versiion with:
-```bash
-docker compose --version
-```
 > **Note:** `The Docker-compose.yaml describes how the Minecraft container is started and configured, for example ports, volumes, and restart behavior.`
 * Python virtual environment
 A Python virtual environment is required for the Python-based testing tools.
-On Ubuntu, install the required package with:
-```bash
-sudo apt update
-sudo apt install python3-venv -y
-```
-Create a virtual environment:
-```bash
-python3 -m venv .venv
-```
-Activate it:
-```bash
-source .venv/bin/activate
-```
-On the windowns Powershell, activate the environment with:
-```bash
-.\.venv\Scripts\Activate.ps1
-```
 ## Quickstart
 ### Clone the repository
 * Navigate to the directory where you want to store the project.
@@ -275,4 +246,27 @@ docker compose down
 
 ```bash
 docker compose up -d
+```
+Check the installed version of Git
+```bash
+git --version
+```
+Check the version of Docker
+```bash
+docker --version
+```
+Check docker compose version
+```bash
+docker compose --version
+```
+Install Python virtual environment
+```bash
+sudo apt update
+sudo apt install python3-venv -y
+python3 -m venv .venv
+```
+Activate the virtual environment
+```bash
+source .venv/bin/activate
+.\.venv\Scripts\Activate.ps1
 ```
