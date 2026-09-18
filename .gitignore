@@ -3,9 +3,9 @@ world/
 logs/
 versions/
 libraries/
-test1_minecraft.py/
-Dockerfile/
-.dockerignore/
+test1_minecraft.py
+Dockerfile
+.dockerignore
 
 
 #  Minecraft generated files
@@ -22,13 +22,13 @@ entrypoint.sh
 
 #  Python virtual enviroment
 env/
-mcserver.jar/
+mcserver.jar
 
 
 
 #  Environment/ secret files
 .env
-.env.example/
+.env.example
 
 #  IDE / editor files
 .vscode/
