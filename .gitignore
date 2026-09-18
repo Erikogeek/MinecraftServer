@@ -11,7 +11,6 @@ test1_minecraft.py
 eula.txt
 server.properties
 
-
 # JSON files
 *.json
 
@@ -21,7 +20,7 @@ server.properties
 
 #  Python virtual enviroment
 env/
-mcserver.jar
+
 
 
 

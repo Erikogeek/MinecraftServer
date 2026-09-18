@@ -8,5 +8,6 @@ exit 1
 fi 
 echo="eula=true" > /data/eula.txt
 
+cd /data
 exec java -jar /app/mcserver.jar
 
