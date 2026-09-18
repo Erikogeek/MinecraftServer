@@ -21,6 +21,9 @@ server.properties
 
 #  Python virtual enviroment
 env/
+mcserver.jar/
+
+
 
 #  Environment/ secret files
 .env
