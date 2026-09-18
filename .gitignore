@@ -11,6 +11,7 @@ Dockerfile/
 #  Minecraft generated files
 eula.txt
 server.properties
+entrypoint.sh
 
 # JSON files
 *.json
