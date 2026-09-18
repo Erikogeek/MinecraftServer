@@ -4,6 +4,7 @@ logs/
 versions/
 libraries/
 test1_minecraft.py/
+Dockerfile/
 
 #  Minecraft generated files
 eula.txt
