@@ -2,6 +2,7 @@
 world/
 logs/
 versions/
+libraries/
 
 #  Minecraft generated files
 eula.txt
@@ -9,6 +10,7 @@ server.properties
 
 # JSON files
 *.json
+
 
 #  Log files
 *.log
