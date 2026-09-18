@@ -4,7 +4,6 @@ logs/
 versions/
 libraries/
 test1_minecraft.py
-Dockerfile
 .dockerignore
 
 
