@@ -23,6 +23,7 @@ Terminal / shell commands, Git, Docker, Docker Compose and Python virtual enviro
 > **Note:** `The Docker-compose.yaml describes how the Minecraft container is started and configured, for example ports, volumes, and restart behavior.`
 * Python virtual environment
 A Python virtual environment is required for the Python-based testing tools.
+
 ## Quickstart
 ### Clone the repository
 * Navigate to the directory where you want to store the project.
@@ -53,11 +54,6 @@ Build the Docker image and start the container in detached mode:
 ```bash
 docker compose up -d
 ```
-Explanation:
-* docker compose uses the docker-compose.yaml configuration.
-* `up` creates and starts the defined services.
-* `-d` runs the container in the background.
-* `--build` rebuilds the Docker image before starting the container.
 Check the container status:
 ```bash
 docker compose ps
@@ -71,6 +67,17 @@ The Minecraft server listens on `port 25565` inside the container.
 The host port is configured through the `.env file`:
 `MINECRAFT_PORT=8888`
 Therefore, the default connection is: `Server-IP:8888`
+
+Build the Docker image and start the container in detached mode:
+```bash
+docker compose up -d
+```
+Explanation:
+* docker compose uses the docker-compose.yaml configuration.
+* `up` creates and starts the defined services.
+* `-d` runs the container in the background.
+* `--build` rebuilds the Docker image before starting the container.
+
 * Check the server status
 ```bash
 docker compose ps
