@@ -1,0 +1,37 @@
+#  Minecraft runtime data
+world/
+logs/
+versions/
+libraries/
+test1_minecraft.py
+
+
+
+#  Minecraft generated files
+eula.txt
+server.properties
+
+# JSON files
+*.json
+
+
+#  Log files
+*.log
+
+#  Python virtual enviroment
+env/
+
+
+
+
+#  Environment/ secret files
+.env
+
+
+#  IDE / editor files
+.vscode/
+.idea/
+
+#  Operating system files
+.DS_Store
+Thumbs.db
