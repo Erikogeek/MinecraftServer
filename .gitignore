@@ -4,7 +4,7 @@ logs/
 versions/
 libraries/
 test1_minecraft.py
-.dockerignore
+
 
 
 #  Minecraft generated files
@@ -26,7 +26,7 @@ env/
 
 #  Environment/ secret files
 .env
-.env.example
+
 
 #  IDE / editor files
 .vscode/
