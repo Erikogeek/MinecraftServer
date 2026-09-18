@@ -3,8 +3,6 @@ FROM eclipse-temurin:25-jre
 WORKDIR /app
 
 COPY . /app/
-#  COPY mcserver.jar .
-#  COPY entrypoint.sh .
 
 RUN chmod +x /app/entrypoint.sh
    
