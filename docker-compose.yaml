@@ -1,20 +1,21 @@
 services:
   mc-server:
-    build: .
-    container_name: minecraft-server
+    image: minecraft-server
+    build:
+      context: .
+    
+    ports:
+      - "${MINECRAFT_PORT:-8888}:25565"
 
     env_file:
-
       - .env
-    ports:
-      - "${MINECRAFT_PORT:-8888}:25565" # 8888:25565
-
+      
     volumes:
-      - ./world:/app/world
-      - ./logs:/app/logs
-      - ./eula.txt:/app/eula.txt
-      - ./server.properties:/app/server.properties
+      - mc-data:/data
 
     restart: unless-stopped
 
-    
+volumes:
+  mc-data:
+
+  
