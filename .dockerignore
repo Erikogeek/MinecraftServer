@@ -8,3 +8,4 @@ versions/
 *.md
 .env.example
 *.pdf
+*.env
