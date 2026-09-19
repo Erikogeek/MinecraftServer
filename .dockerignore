@@ -6,3 +6,5 @@ libraries/
 versions/
 *.log
 *.md
+.env.example
+*.pdf
