@@ -1,0 +1,11 @@
+.git/
+env/
+logs/
+world/
+libraries/
+versions/
+*.log
+*.md
+.env.example
+*.pdf
+*.env

@@ -1,0 +1,21 @@
+services:
+  mc-server:
+    image: minecraft-server
+    build:
+      context: .
+    
+    ports:
+      - "${MINECRAFT_PORT:-8888}:25565"
+
+    env_file:
+      - .env
+      
+    volumes:
+      - mc-data:/data
+
+    restart: unless-stopped
+
+volumes:
+  mc-data:
+
+  
